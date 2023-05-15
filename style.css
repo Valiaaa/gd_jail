@@ -5,6 +5,8 @@
     font-weight: normal;
 }
 
+@import url("https://use.typekit.net/mze8fyu.css");
+
 :root {
     --bg: white;
     --txt: black;
@@ -54,7 +56,7 @@ a {
 }
 
 .gif {
-    width: 100%;
+    width: 70%;
 }
 
 .strike {
@@ -90,10 +92,19 @@ a {
     padding-right: 0.5vw;
     border: 2px solid black;
     cursor: pointer;
+    width: fit-content;
 }
 
 #menu:hover {
     cursor: pointer;
+}
+
+#ad {
+    position: sticky;
+    margin-top: 10px;
+    /* top: calc(20px + 10px); */
+    padding: 0.25vw;
+    border: 2px solid lightgray;
 }
 
 ol {
@@ -163,7 +174,17 @@ ol {
     padding:10px;
 }
 
-#hangt {
+#hangt1 {
+    font-family: "Arial Narrow";
+    letter-spacing: -0.2vw;
+    width: fit-content;
+    font-size: 6vw;
+    line-height: 5.8vw;
+    display: block;
+    margin: auto;
+}
+
+#hangt2 {
     font-family: "Arial Narrow";
     letter-spacing: -0.2vw;
     width: fit-content;
@@ -188,6 +209,52 @@ ol {
     display: block;
     margin: auto;
 }
+
+.poor {
+    width: calc(100% - 20px);
+    background-color:gold;
+    padding:10px;
+}
+
+#poort {
+    font-family: "comic sans ms";
+    width: fit-content;
+    font-size: 5vw;
+    line-height: 5vw;
+    display: block;
+    margin: auto;
+}
+
+.bad {
+    width: calc(100% - 20px);
+    background-color:lightslategrey;
+    padding:10px;
+}
+
+#badt {
+    font-family: "comic sans ms";
+    width: fit-content;
+    font-size: 5vw;
+    line-height: 5vw;
+    display: block;
+    margin: auto;
+}
+
+.width {
+    width: calc(100% - 20px);
+    background-color:greenyellow;
+    padding:10px;
+}
+
+#badt {
+    font-family: "comic sans ms";
+    width: fit-content;
+    font-size: 5vw;
+    line-height: 5vw;
+    display: block;
+    margin: auto;
+}
+
 
 
 

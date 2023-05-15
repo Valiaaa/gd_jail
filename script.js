@@ -3,6 +3,11 @@ $(document).ready(function(){
     var menuht = $('#main').height();
     $('.menu').height(menuht);
 
+    var menuwt = $('#menu').width();
+    $('#ad').width(menuwt);
+    var menuh = $('#menu').height();
+    $('#ad').css("top", menuh + 14);
+
     //stretched
     $("#stretchsl").on('change',function updateSliderValue() {
         var output = $(this).siblings("output").first();
@@ -53,11 +58,14 @@ $(document).ready(function(){
 
 
     //hang
+    var hangwt = $('#hangt1').width();
+    $('#hangt2').width(hangwt);
+
     $('#hangstory').change(function(){
         if ($(this).is(':checked')) {
-            $("#hangt").css("hanging-punctuation", "first");
+            $("#hangt2").css("transform", "translateX(1.5vw)");
         } else {
-            $("#hangt").css("hanging-punctuation", "none");
+            $("#hangt2").css("transform", "translateX(0)");
         }
 
         if ($(this).is(':checked') && $('#hangsmart').is(':checked')) {
@@ -70,9 +78,11 @@ $(document).ready(function(){
 
     $('#hangsmart').change(function(){
         if ($(this).is(':checked')) {
-            $("#hangt").html('“This is supposed to be an<br>hanged smart quote.”');
+            $("#hangt1").text($("#hangt1").text().replace('"', "“"));
+            $("#hangt2").text($("#hangt2").text().replace('"', "”"));
         } else {
-            $("#hangt").html('"This is supposed to be an<br>hanged smart quote."');
+            $("#hangt1").text($("#hangt1").text().replace("“", '"'));
+            $("#hangt2").text($("#hangt2").text().replace("”", '"'));
         }
 
         if ($(this).is(':checked') && $('#hangstory').is(':checked')) {
@@ -120,18 +130,64 @@ $(document).ready(function(){
     });
 
 
-
-
-
-
-
-    checkfinal = setInterval(() => {
-        if ($('#stretch').hasClass("strike")) {
-            // $('#alarm').show();
-            checkfinal = clearInterval(checkfinal);
-        } else {
-
+    //poor
+    $("input[type='radio'][name='c']").change(function() {
+        if ($("#poor1").is(':checked')) {
+            $("#poort").css("font-family","comic sans ms");
+        } else if ($("#poor2").is(':checked')) {
+            $("#poort").css("font-family","papyrus");
+        } else if ($("#poor3").is(':checked')) {
+            $("#poort").css("font-family","Brush Script MT");
+        } else if ($("#poor4").is(':checked')) {
+            $("#poort").css("font-family","futura");
+        } else if ($("#poor5").is(':checked')) {
+            $("#poort").css("font-family","freight-big-pro");
         }
-    }, 1);
+
+        if ($("#hy12").is(':checked') && $("#hy23").is(':checked')) {
+            $("#hyphengif").attr('src',"pic/party.gif");
+            $("#hyphen").addClass("strike")
+        } else {
+            $("#hyphengif").attr('src',"pic/bomb.gif");
+        }
+    });
+
+
+    //bad
+    $("input[type='radio'][name='c']").change(function() {
+        if ($("#poor1").is(':checked')) {
+            $("#poort").css("font-family","comic sans ms");
+        } else if ($("#poor2").is(':checked')) {
+            $("#poort").css("font-family","papyrus");
+        } else if ($("#poor3").is(':checked')) {
+            $("#poort").css("font-family","Brush Script MT");
+        } else if ($("#poor4").is(':checked')) {
+            $("#poort").css("font-family","futura");
+        } else if ($("#poor5").is(':checked')) {
+            $("#poort").css("font-family","freight-big-pro");
+        }
+
+        if ($("#poor5").is(':checked')) {
+            $("#poorgif").attr('src',"pic/party.gif");
+            $("#poor").addClass("strike")
+        } else {
+            $("#poorgif").attr('src',"pic/bomb.gif");
+        }
+    });
+
+
+
+
+
+    //check final
+    var show = true;
+
+    $("input[type='radio'], input[type='range'], input[type='checkbox']").change(function() {
+        if ($('#stretch').hasClass("strike") && $('#skew').hasClass("strike") && show) {
+            setTimeout(function()
+            {alert("Final Challenge Unlocked!");},40);
+            show = false;
+        } else {}
+    });
 
 });

@@ -178,6 +178,17 @@ $(document).ready(function(){
 
 
 
+    //final
+    $(".slider").on('change',function updateSliderValue() {
+        var therangeoutput = $(this).siblings("output").first();
+        $(therangeoutput).val($(this).val());
+        var redValue = $("#redrangevalue").val().toString();
+        var greenValue = $("#greenrangevalue").val().toString();
+        var blueValue = $("#bluerangevalue").val().toString();
+        var theColour = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
+        $(":root").css("--bg", theColour);
+    });
+
 
     //check final
     var show = true;
@@ -186,6 +197,7 @@ $(document).ready(function(){
         if ($('#stretch').hasClass("strike") && $('#skew').hasClass("strike") && show) {
             setTimeout(function()
             {alert("Final Challenge Unlocked!");},40);
+            $("#final, #final a").css({"color": "red", "pointer-events": "auto", "text-decoration": "underline", "text-decoration-thickness":"1.5px"});
             show = false;
         } else {}
     });

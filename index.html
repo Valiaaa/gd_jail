@@ -23,6 +23,11 @@
       </style>
 
     <body>
+        <div id="screen">
+            <div style="font-family: Arial Narrow; font-size: 11vw; letter-spacing: -0.5vw; text-align: center; margin-left: -1vw; margin-top: 28vh;">Graphic Design *<i>Jail </i>*</div>
+            <br>
+            <div style="font-family: Arial Narrow; font-size: 3vw; text-align: center;">is only available on landscape-mode screens.<br>Sorry for the inconvenience, hope you revisit soon!</div>
+        </div>
         <div id="title">Graphic Design *<i>Jail </i>*</div>
         <div id="intro">Have you ever heard of “illegal design” before and wondered what it means? Are you curious about the “red flags” of graphic design? Do you wanna know what exactly graphic designers are adjusting and deciding everyday? If you answered yes to any of these questions, then this website is for you!<br>“Graphic Design Jail” is a series of projects that aim to explore and challenge the current do’s-and-dont’s of graphic design. Below are several design decisions, each presented with options that are theoretically right or wrong. From this website you will hopefully learn how the classic design systems work and eventually make your own decisions.</div>
         <br><br>
@@ -41,7 +46,7 @@
         <img src="pic/catjail.gif" class="catjail">
         <img src="pic/catjail.gif" class="catjail">
         <img src="pic/catjail.gif" class="catjail">
-        <img src="pic/catjail.gif" class="catjail">
+        <img src="pic/catjail.gif" class="catjail" id="abandon1">
 
 
         <div class="menu">
@@ -52,7 +57,11 @@
                     <li id="hang"><nav><a href="#unhanged_quote">Unhanged Quote</a></nav></li>
                     <li id="hyphen"><nav><a href="#hyphen_&_dash">Hyphen & Dash</a></nav></li>
                     <li id="poor"><nav><a href="#poor_font_choice">Poor Font Choice</a></nav></li>
-                    <li id="width"><nav><a href="#bad_text_width">Bad Text Width</a></nav></li>
+                    <li id="width"><nav><a href="#hard_to_read_text">Bad Text Width</a></nav></li>
+                    <li id="width"><nav><a href="#hard_to_read_text">All Caps Text</a></nav></li>
+                    <li id="width"><nav><a href="#hard_to_read_text">“Display” Text</a></nav></li>
+                    <li id="width"><nav><a href="#hard_to_read_text">Paragraph Separation</a></nav></li>
+                    <li id="width"><nav><a href="#tracking_&_leading">Tracking & Leading</a></nav></li>
                     <br>
                     <li id="final"><a href="final_challenge.html">Final Challenge</a></li>
                 </ol>
@@ -74,7 +83,7 @@
                 </div>
             </div>
             <div class="control">
-                Font Width:
+                Width Scale:
                 <div class="slidecontainer">
                     <input type="range" min="30" step="10" max="180" value="30" class="slider" id="stretchsl">
                     <output class="rangevalue" id="stretchvalue">30</output>
@@ -201,58 +210,90 @@
 
 
         <div class="content">
-            <scroll-container><scroll-page id="bad_text_width"></scroll-page></scroll-container>
-            <div class="bad">
+            <scroll-container><scroll-page id="hard_to_read_text"></scroll-page></scroll-container>
+            <div class="width">
                 <div class="demo">GRAPHIC DESIGN *JAIL*</div>
-                <div class="demo" style="float:right">DEMO 5</div>
+                <div class="demo" style="float:right">DEMO 6</div>
                 <div class="demo" style="width: 100%; text-align: center; transform: translateY(-18px);">TYPOGRAPHY RULES</div>
                 <br><br><br><br>
-                <div id="poort">Poor Font Choice</div>
+                <div class="widtht">
+                    Having the right amount of characters on each line is key to the readability of your text. Indeed, it shouldn’t merely be your design that dictates the width of your text — the ability of users to easily read through the text should also be a critical factor. Some fundamental exploration of line length and readability was conducted by Emil Ruder, a mid-twentieth century Swiss graphic designer. Ruder concluded that the optimal line length for body text is 50–60 characters per line, including spaces (“Typographie”, E. Ruder). Other sources suggest that up to 75 characters is acceptable.
+                </div><br>
+                <div class="widtht">
+                    Too wide: if a line of text is too long the reader’s eyes will have a hard time focusing on the text. This is because the line length makes it difficult to gauge where the line starts and ends. Furthermore it can be difficult to continue onto the correct line in large blocks of text.
+                </div><br>
+                <div class="widtht">
+                    Too narrow: if a line is too short the eye will have to travel back too often, breaking the reader’s rhythm. Too-short lines also tend to stress readers, making them begin on the next line before finishing the current one (hence skipping potentially important words).
+                </div>
                 <br><br><br><br>
-                <div class="demo" style="width: 100%; text-align: center;">This rule may pertain to punctuation, but it remains an essential aspect of design, as precise delivery of the message is crucial.<br>To receive guidance on proper punctuation usage, click <a href="https://www.thepunctuationguide.com/hyphen.html" target="_blank">↗here</a>.</div>
+                <div class="demo" style="width: 100%; text-align: center;">Text Source:
+                    <a href="https://baymard.com/blog/line-length-readability" target="_blank">Readability: The Optimal Line Length</a></div>
             </div>
         </div>
         <div class="control">
-            <input type="radio" id="poor1" name="d" checked="checked">
-            <label for="c1">Comic Sans</label><br>
-            <input type="radio" id="poor2" name="d">
-            <label for="c2">Papyrus</label><br>  
-            <input type="radio" id="poor3" name="d">
-            <label for="c3">Brush Script</label><br>
-            <input type="radio" id="poor4" name="d">
-            <label for="c3">Futura</label><br>
-            <input type="radio" id="poor5" name="d">
-            <label for="c3">Freight Pro</label><br>
+            Text Width:
+            <div class="slidecontainer">
+                <input type="range" min="10" step="10" max="100" value="100" class="slider" id="widthsl">
+                <output class="rangevalue" id="widthvalue">100</output>
+            </div>
             <br>
-            <img src="pic/bomb.gif" class="gif" id="hyphengif">
+            <img src="pic/bomb.gif" class="gif" id="widthgif">
         </div>
         <br><br>
+
 
 
         <div class="content">
-            <div class="width">
+            <scroll-container><scroll-page id="tracking_&_leading"></scroll-page></scroll-container>
+            <div class="tracking">
                 <div class="demo">GRAPHIC DESIGN *JAIL*</div>
-                <div class="demo" style="float:right">DEMO 5</div>
+                <div class="demo" style="float:right">DEMO 7</div>
                 <div class="demo" style="width: 100%; text-align: center; transform: translateY(-18px);">TYPOGRAPHY RULES</div>
                 <br><br><br><br>
-                <div id="poort">Poor Font Choice</div>
+                <div id="trackingt">Stretched Font</div>
                 <br><br><br><br>
-                <div class="demo" style="width: 100%; text-align: center;">This rule may pertain to punctuation, but it remains an essential aspect of design, as precise delivery of the message is crucial.<br>To receive guidance on proper punctuation usage, click <a href="https://www.thepunctuationguide.com/hyphen.html" target="_blank">↗here</a>.</div>
+                <div class="demo" style="width: 100%; text-align: center;">The typeface should remain how it is designed. If you stretch it, the proportion of its glyph will be distorted.<br>When you want a condensed / expanded text in your design, just search for a matching variable type.</div>
             </div>
         </div>
         <div class="control">
-            <input type="radio" id="poor1" name="d" checked="checked">
-            <label for="c1">Comic Sans</label><br>
-            <input type="radio" id="poor2" name="d">
-            <label for="c2">Papyrus</label><br>  
-            <input type="radio" id="poor3" name="d">
-            <label for="c3">Brush Script</label><br>
-            <input type="radio" id="poor4" name="d">
-            <label for="c3">Futura</label><br>
-            <input type="radio" id="poor5" name="d">
-            <label for="c3">Freight Pro</label><br>
+            Font Width:
+            <div class="slidecontainer">
+                <input type="range" min="30" step="10" max="180" value="30" class="slider" id="stretchsl">
+                <output class="rangevalue" id="stretchvalue">30</output>
+            </div>
             <br>
-            <img src="pic/bomb.gif" class="gif" id="hyphengif">
+            <img src="pic/bomb.gif" class="gif" id="stretchgif">
+        </div>
+        <br><br>
+
+
+
+        <div class="content">
+            <scroll-container><scroll-page id="hard_to_read_text"></scroll-page></scroll-container>
+            <div class="width">
+                <div class="demo">GRAPHIC DESIGN *JAIL*</div>
+                <div class="demo" style="float:right">DEMO 9</div>
+                <div class="demo" style="width: 100%; text-align: center; transform: translateY(-18px);">TYPOGRAPHY RULES</div>
+                <br><br><br><br>
+                <div class="widtht">
+                    Having the right amount of characters on each line is key to the readability of your text. Indeed, it shouldn’t merely be your design that dictates the width of your text — the ability of users to easily read through the text should also be a critical factor. Some fundamental exploration of line length and readability was conducted by Emil Ruder, a mid-twentieth century Swiss graphic designer. Ruder concluded that the optimal line length for body text is 50–60 characters per line, including spaces (“Typographie”, E. Ruder). Other sources suggest that up to 75 characters is acceptable.
+                </div>
+                <div class="widtht">
+                    Too wide: if a line of text is too long the reader’s eyes will have a hard time focusing on the text. This is because the line length makes it difficult to gauge where the line starts and ends. Furthermore it can be difficult to continue onto the correct line in large blocks of text.
+                </div>
+                <div class="widtht">
+                    Too narrow: if a line is too short the eye will have to travel back too often, breaking the reader’s rhythm. Too-short lines also tend to stress readers, making them begin on the next line before finishing the current one (hence skipping potentially important words).
+                </div>
+                <br><br><br><br>
+                <div class="demo" style="width: 100%; text-align: center;">Text Source:
+                    <a href="https://baymard.com/blog/line-length-readability" target="_blank">Readability: The Optimal Line Length</a></div>
+            </div>
+        </div>
+        <div class="control">
+            Indentation <input type="checkbox" id="widthcheck1"><br>
+            Paragraph Spacing <input type="checkbox" id="widthcheck2"><br>
+            <br>
+            <img src="pic/bomb.gif" class="gif" id="widthgif">
         </div>
         <br><br>
 
@@ -260,54 +301,6 @@
 
 
 
-
-
-
-            <!-- <div class="p3">
-                <div class="p3t1">Hard-to-read Text Block</div>
-                <div class="p3t2">
-                    Having the right amount of characters on each line is key to the readability of your text. Indeed, it shouldn’t merely be your design that dictates the width of your text — the ability of users to easily read through the text should also be a critical factor. Some fundamental exploration of line length and readability was conducted by Emil Ruder, a mid-twentieth century Swiss graphic designer. Ruder concluded that the optimal line length for body text is 50–60 characters per line, including spaces (“Typographie”, E. Ruder). Other sources suggest that up to 75 characters is acceptable.
-                </div>
-                <div class="p3t2">
-                    Too wide: if a line of text is too long the reader’s eyes will have a hard time focusing on the text. This is because the line length makes it difficult to gauge where the line starts and ends. Furthermore it can be difficult to continue onto the correct line in large blocks of text.
-                </div>
-                <div class="p3t2">
-                    Too narrow: if a line is too short the eye will have to travel back too often, breaking the reader’s rhythm. Too-short lines also tend to stress readers, making them begin on the next line before finishing the current one (hence skipping potentially important words).
-                </div>
-                <div class="p3t2">Source:
-                    <a href="https://baymard.com/blog/line-length-readability" target="_blank">Readability: The Optimal Line Length</a>
-                </div>
-                <h1 class="check">
-                    <input type="checkbox" id="width1">
-                    <input type="checkbox" id="width2">
-                    <input type="checkbox" id="width3">
-                    <input type="checkbox" id="width4">
-                </h1>
-            </div> -->
-
-
-
-            <!-- <div class="p4">
-                <div class="p2t1">Hard-to-read Text Block</div>
-                <div class="p2t2">
-                    Having the right amount of characters on each line is key to the readability of your text. Indeed, it shouldn’t merely be your design that dictates the width of your text — the ability of users to easily read through the text should also be a critical factor. Some fundamental exploration of line length and readability was conducted by Emil Ruder, a mid-twentieth century Swiss graphic designer. Ruder concluded that the optimal line length for body text is 50–60 characters per line, including spaces (“Typographie”, E. Ruder). Other sources suggest that up to 75 characters is acceptable.
-                </div>
-                <div class="p2t2">
-                    Too wide: if a line of text is too long the reader’s eyes will have a hard time focusing on the text. This is because the line length makes it difficult to gauge where the line starts and ends. Furthermore it can be difficult to continue onto the correct line in large blocks of text.
-                </div>
-                <div class="p2t2">
-                    Too narrow: if a line is too short the eye will have to travel back too often, breaking the reader’s rhythm. Too-short lines also tend to stress readers, making them begin on the next line before finishing the current one (hence skipping potentially important words).
-                </div>
-                <div class="p2t2">Source:
-                    <a href="https://baymard.com/blog/line-length-readability" target="_blank">Readability: The Optimal Line Length</a>
-                </div>
-                <h1 class="check">
-                    <input type="checkbox" id="width1">
-                    <input type="checkbox" id="width2">
-                    <input type="checkbox" id="width3">
-                    <input type="checkbox" id="width4">
-                </h1>
-            </div> -->
         </div>
 
     </body>

@@ -12,15 +12,22 @@
 }
 
 body {
-    cursor: default;
     background-color: var(--bg);
+}
+
+i {
+    transition: none;
 }
 
 a {
     color: inherit;
-    /* cursor: pointer; */
+    cursor: pointer;
     transition: none;
     text-decoration-thickness: 1.5px;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 #title {
@@ -65,6 +72,15 @@ a {
     position: relative;
 }
 
+#screen {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
 
 
 /* Main */
@@ -97,16 +113,25 @@ a {
     margin-top: 10px;
     /* top: calc(20px + 10px); */
     padding: 0.25vw;
-    border: 2px solid lightgray;
+    border: 2px solid rgba(0,0,0,0.2);
+}
+
+#ad2 {
+    position: sticky;
+    width: 11.95vw;
+    /* top: calc(20px + 10px); */
+    padding: 0.25vw;
+    border: 2px solid rgba(0,0,0,0.2);
 }
 
 ol {
     margin-block-start: 0;
     margin-block-end: 0;
+    padding-inline-start: 2.2vw;
 }
 
 #main {
-    width: calc(96vw - 213px);
+    width: calc(96vw - 235px);
     display: inline-block;
     vertical-align: top;
     margin-top: 1vw;
@@ -205,7 +230,7 @@ ol {
 
 .poor {
     width: calc(100% - 20px);
-    background-color:gold;
+    background-color:greenyellow;
     padding:10px;
 }
 
@@ -218,29 +243,31 @@ ol {
     margin: auto;
 }
 
-.bad {
+.width {
     width: calc(100% - 20px);
-    background-color:lightslategrey;
+    background-color:darkgrey;
     padding:10px;
 }
 
-#badt {
-    font-family: "comic sans ms";
+.widtht {
+    width: 100%;
+    font-family: "Arial Narrow";
     width: fit-content;
-    font-size: 5vw;
-    line-height: 5vw;
+    font-size: 20px;
+    line-height: 24px;
     display: block;
     margin: auto;
 }
 
-.width {
+.tracking {
     width: calc(100% - 20px);
-    background-color:greenyellow;
+    background-color:gold;
     padding:10px;
 }
 
-#badt {
-    font-family: "comic sans ms";
+#trackingt {
+    font-family: "arial narrow";
+    letter-spacing: -0.2vw;
     width: fit-content;
     font-size: 5vw;
     line-height: 5vw;
@@ -257,76 +284,34 @@ ol {
     text-decoration: none;
 }
 
-
-/* Page 3
-.p3 {
-    display: none;
-    max-width: inherit;
-    height: calc(100vh - 6px);
-    position: absolute;
-    color: var(--txt);
-    top: 3px;
-}
-
-.p3t1 {
-    font-family: freight-display-pro, serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 35px;
-    line-height: 40px;
-    margin-bottom: 18px;
-}
-
-.p3t2 {
-    font-family: freight-display-pro, serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 22px;
-    line-height: 28px;
-    text-shadow:0px 0px 12px var(--txt);
-    width: 420px;
-    margin-bottom: 14px;
-}
-
-.p3 .check {
-    position: absolute;
-    top: auto;
-    bottom: 17.5px;
-    left: -6px;
-    grid-template-columns: repeat(4,32px);
-}
-
-.p3 input[type="checkbox"] {
-    grid-row: 1;
-    color: var(--txt);
-}
-
-.strike3 {
-    position: absolute;
-    left: -7px;
-    top: 94px;
-    height: 2px;
-    background: var(--txt);
-    transform: rotate(-45deg);
-    content: "";
-    width: 32px;
-    display: none;
-    z-index: -1;
-  } */
-
-
-
-/* Page Final */
-.pf {
-    width: 80%;
+#title2 {
+    font-family: 'Arial Narrow';
+    letter-spacing: -7px;
+    font-size: 160px;
+    width: fit-content;
     display: inline-block;
+    margin-top: -1.5vw;
+    transform-origin: top left;
 }
 
-.pfm {
-    width: 16.5%;
-    padding-left: 3%;
-    font-size: 16px;
-    line-height: 18.5px;
-    display: inline-block;
-    vertical-align: top;
+.text {
+    width: calc(100% - 20px);
 }
+
+
+@media (max-width: 1200px) {
+    #abandon1 {
+        display: none;
+    }
+  }
+
+@media (max-height: 680px), screen and (orientation: portrait) {
+    #screen {
+        display: block;
+    }
+
+    body {
+        overflow: hidden;
+        margin: 0px;
+    }
+  }

@@ -371,6 +371,12 @@ ol {
     }
   }
 
+@media (min-width: 1900px) {
+    #main {
+        width: calc(95vw - 235px);
+    }
+}
+
 @media (max-height: 680px), screen and (orientation: portrait) {
     #screen {
         display: block;

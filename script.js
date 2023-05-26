@@ -11,6 +11,28 @@ $(document).ready(function(){
 
 
     //final
+    $('#control2').change(function(){
+        if ($(this).is(':checked')) {
+            $(".control2").hide();
+            $(".control").show();
+            $(this).prop("checked", false);
+        } else {
+            $(".control2").show();
+            $(".control").hide();
+        }
+    });
+
+    $('#control').change(function(){
+        if ($(this).is(':checked')) {
+            $(".control").hide();
+            $(".control2").css("display","inline-block");
+            $(this).prop("checked", false);
+        } else {
+            $(".control").show();
+            $(".control2").hide();
+        }
+    });
+
     $('#catgif').change(function(){
         if ($(this).is(':checked')) {
             $(".catjail").show();
@@ -96,6 +118,68 @@ $(document).ready(function(){
         $(output).val($(this).val());
         var size = $("#titleleftvalue").val().toString();
         $("#title2").css({'margin-left': size + 'px'});
+    });
+
+
+    $("#textfont").each(function(){
+        $(this).on('change',function updateSliderValue() {
+            output = $(this).val();
+            $(output).val($(this).val());
+            $('.text').css('font-family', output);
+        });
+    });
+
+    $("#textred, #textgreen, #textblue").on('change',function updateSliderValue() {
+        var output = $(this).siblings("output").first();
+        $(output).val($(this).val());
+        var redValue = $("#textredvalue").val().toString();
+        var greenValue = $("#textgreenvalue").val().toString();
+        var blueValue = $("#textbluevalue").val().toString();
+        var color = "rgb(" + redValue + "," + greenValue + "," + blueValue + ")";
+        $(".text").css("color", color);
+    });
+
+    $("#textsize").on('change',function updateSliderValue() {
+        var output = $(this).siblings("output").first();
+        $(output).val($(this).val());
+        var size = $("#textsizevalue").val().toString();
+        $(".text").css({'font-size': size + "px"});
+    });
+
+    $("#textscale").on('change',function updateSliderValue() {
+        var output = $(this).siblings("output").first();
+        $(output).val($(this).val());
+        var size = $("#textscalevalue").val().toString();
+        var realsize = size / 100
+        $(".text").css({'transform': 'scaleX(' + realsize + ")", 'transform-origin': 'top left'});
+    });
+
+    $("#texttracking").on('change',function updateSliderValue() {
+        var output = $(this).siblings("output").first();
+        $(output).val($(this).val());
+        var size = $("#texttrackingvalue").val().toString();
+        $(".text").css({'letter-spacing': size + 'px'});
+    });
+
+    $("#textleading").on('change',function updateSliderValue() {
+        var output = $(this).siblings("output").first();
+        $(output).val($(this).val());
+        var size = $("#textleadingvalue").val().toString();
+        $(".text").css({'line-height': size + 'px'});
+    });
+
+    $("#texttop").on('change',function updateSliderValue() {
+        var output = $(this).siblings("output").first();
+        $(output).val($(this).val());
+        var size = $("#texttopvalue").val().toString();
+        $(".text").css({'margin-top': size + 'px'});
+    });
+
+    $("#textleft").on('change',function updateSliderValue() {
+        var output = $(this).siblings("output").first();
+        $(output).val($(this).val());
+        var size = $("#textleftvalue").val().toString();
+        $(".text").css({'margin-left': size + 'px'});
     });
 
 
@@ -247,11 +331,6 @@ $(document).ready(function(){
 
 
     //width
-    $("input[type='radio'], input[type='range'], input[type='checkbox']").change(function() {
-        var width = $("#widthvalue").val().toString();
-        $(".widtht").css('width', width + "%");
-    });
-
     $("#widthsl").on('change',function updateSliderValue() {
         var output = $(this).siblings("output").first();
         $(output).val($(this).val());
@@ -344,14 +423,52 @@ $(document).ready(function(){
     });
 
 
+    //tracking
+    $("#trackingsl").on('change',function updateSliderValue() {
+        var output = $(this).siblings("output").first();
+        $(output).val($(this).val());
+        var width = $("#trackingvalue").val().toString();
+        $(".trackingt").css('letter-spacing', width + "px");
+
+        if ($('#trackingvalue').val() == '0' || $('#trackingvalue').val() == '1') {
+            show1 = true
+        } else {
+            show1 = false
+        }
+    });
+
+    $("#leadingsl").on('change',function updateSliderValue() {
+        var output = $(this).siblings("output").first();
+        $(output).val($(this).val());
+        var width = $("#leadingvalue").val().toString();
+        $(".trackingt").css('line-height', width + "px");
+
+        if ($('#leadingvalue').val() >= '22' && $('#leadingvalue').val() <= '25') {
+            show2 = true
+        } else {
+            show2 = false
+        }
+    });
+
+    $('#trackingsl, #leadingsl').change(function(){
+        if (show1 && show2) {
+            $("#trackinggif").attr('src',"pic/party.gif");
+            $("#tracking").addClass("strike")
+        } else {
+            $("#trackinggif").attr('src',"pic/bomb.gif");
+        }
+    });
+
+
     //check final
     var show = true;
 
     $("input[type='radio'], input[type='range'], input[type='checkbox']").change(function() {
-        if ($('#stretch').hasClass("strike") && $('#skew').hasClass("strike") && $('#hang').hasClass("strike") && $('#hyphen').hasClass("strike") && $('#poor').hasClass("strike") && $('#width').hasClass("strike") && $('').hasClass("strike") && show) {
+        if ($('#stretch').hasClass("strike") && $('#skew').hasClass("strike") && $('#hang').hasClass("strike") && $('#hyphen').hasClass("strike") && $('#poor').hasClass("strike") && $('#width').hasClass("strike") && $('#caps').hasClass("strike") && $('#display').hasClass("strike") && $('#paragraph').hasClass("strike") && $('#tracking').hasClass("strike") && show) {
             setTimeout(function()
             {alert("Final Challenge Unlocked!");},40);
             $("#final, #final a").css({"color": "red", "pointer-events": "auto", "text-decoration": "underline", "text-decoration-thickness":"1.5px"});
+            $("#final").addClass("unlock")
             show = false;
         } else {}
     });

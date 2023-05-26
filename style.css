@@ -75,7 +75,7 @@ a:hover {
 #screen {
     display: none;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     height: 100%;
     background-color: white;
@@ -145,6 +145,8 @@ ol {
 .control {
     width: 16.5%;
     display: inline-block;
+    position: relative;
+    z-index: 2;
     vertical-align: top;
     padding-left: 3%;
 }
@@ -257,6 +259,7 @@ ol {
     line-height: 24px;
     display: block;
     margin: auto;
+    width: 100%;
 }
 
 .caps {
@@ -318,10 +321,11 @@ ol {
     font-family: arial narrow;
     width: fit-content;
     font-size: 20px;
-    line-height: 24px;
+    line-height: 32px;
     width: 50%;
     display: block;
     margin: auto;
+    letter-spacing: -5px;
 }
 
 
@@ -345,6 +349,19 @@ ol {
 
 .text {
     width: calc(100% - 20px);
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    line-height: 29px;
+}
+
+.control2 {
+    width: 16.5%;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    vertical-align: top;
+    padding-left: 3%;
+    display: none;
 }
 
 

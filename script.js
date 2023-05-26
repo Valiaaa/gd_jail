@@ -266,38 +266,82 @@ $(document).ready(function(){
         }
     });
 
-    // $('#widthcheck1').change(function(){
-    //     if ($(this).is(':checked')) {
-    //         $(".widtht").css('text-indent', '30px');
-    //     } else {
-    //         $(".widtht").css('text-indent', '0');
-    //     }
-    // });
 
-    // $('#widthcheck2').change(function(){
-    //     if ($(this).is(':checked')) {
-    //         $(".widtht").css('margin-bottom', '20px');
-    //     } else {
-    //         $(".widtht").css('margin-bottom', '0');
-    //     }
-    // });
+    //caps
+    $("input[type='radio'][name='d']").change(function() {
+        if ($("#caps1").is(':checked')) {
+            $(".capst").css("text-transform","uppercase");
+        } else if ($("#caps2").is(':checked')) {
+            $(".capst").css("text-transform","lowercase");
+        } else if ($("#caps3").is(':checked')) {
+            $(".capst").css("text-transform","capitalize");
+        } else if ($("#caps4").is(':checked')) {
+            $(".capst").css("text-transform","none");
+        }
 
-    // $('#widthsl, #widthcheck1, #widthcheck2').change(function(){
-    //     if ($('#widthcheck1').is(':checked') && $('#widthcheck2').is(':checked')){
-    //         show1 = false
-    //     } else if ($('#widthcheck1').is(':checked') || $('#widthcheck2').is(':checked')) {
-    //         show1 = true
-    //     } else {
-    //         show1 = false
-    //     }
+        if ($("#caps4").is(':checked')) {
+            $("#capsgif").attr('src',"pic/party.gif");
+            $("#caps").addClass("strike")
+        } else {
+            $("#capsgif").attr('src',"pic/bomb.gif");
+        }
+    });
 
-    //     if (show1 && show2) {
-    //         $("#widthgif").attr('src',"pic/party.gif");
-    //         $("#width").addClass("strike")
-    //     } else {
-    //         $("#widthgif").attr('src',"pic/bomb.gif");
-    //     }
-    // });
+
+    //display
+    $("input[type='radio'][name='e']").change(function() {
+        if ($("#display1").is(':checked')) {
+            $(".displayt").css("font-family","freight-display-pro, serif");
+        } else if ($("#display2").is(':checked')) {
+            $(".displayt").css("font-family","freight-big-pro, serif");
+        } else if ($("#display3").is(':checked')) {
+            $(".displayt").css("font-family","freightdispcmp-pro, serif");
+        } else if ($("#display4").is(':checked')) {
+            $(".displayt").css("font-family","freight-text-pro, serif");
+        }
+
+        if ($("#display4").is(':checked')) {
+            $("#displaygif").attr('src',"pic/party.gif");
+            $("#display").addClass("strike")
+        } else {
+            $("#displaygif").attr('src',"pic/bomb.gif");
+        }
+    });
+
+
+    //paragraph
+    $('#paragraphcheck1').change(function(){
+        if ($(this).is(':checked')) {
+            $(".paragrapht").css('text-indent', '30px');
+        } else {
+            $(".paragrapht").css('text-indent', '0');
+        }
+    });
+
+    $('#paragraphcheck2').change(function(){
+        if ($(this).is(':checked')) {
+            $(".paragrapht").css('margin-bottom', '20px');
+        } else {
+            $(".paragrapht").css('margin-bottom', '0');
+        }
+    });
+
+    $('#paragraphcheck1, #paragraphcheck2').change(function(){
+        if ($('#paragraphcheck1').is(':checked') && $('#paragraphcheck2').is(':checked')){
+            show1 = false
+        } else if ($('#paragraphcheck1').is(':checked') || $('#paragraphcheck2').is(':checked')) {
+            show1 = true
+        } else {
+            show1 = false
+        }
+
+        if (show1) {
+            $("#paragraphgif").attr('src',"pic/party.gif");
+            $("#paragraph").addClass("strike")
+        } else {
+            $("#paragraphgif").attr('src',"pic/bomb.gif");
+        }
+    });
 
 
     //check final

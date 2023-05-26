@@ -57,11 +57,11 @@
                     <li id="hang"><nav><a href="#unhanged_quote">Unhanged Quote</a></nav></li>
                     <li id="hyphen"><nav><a href="#hyphen_&_dash">Hyphen & Dash</a></nav></li>
                     <li id="poor"><nav><a href="#poor_font_choice">Poor Font Choice</a></nav></li>
-                    <li id="width"><nav><a href="#hard_to_read_text">Bad Text Width</a></nav></li>
-                    <li id="width"><nav><a href="#hard_to_read_text">All Caps Text</a></nav></li>
-                    <li id="width"><nav><a href="#hard_to_read_text">“Display” Text</a></nav></li>
-                    <li id="width"><nav><a href="#hard_to_read_text">Paragraph Separation</a></nav></li>
-                    <li id="width"><nav><a href="#tracking_&_leading">Tracking & Leading</a></nav></li>
+                    <li id="width"><nav><a href="#bad_text_width">Bad Text Width</a></nav></li>
+                    <li id="caps"><nav><a href="#all_caps_text">All Caps Text</a></nav></li>
+                    <li id="display"><nav><a href="#display_text">“Display” Text</a></nav></li>
+                    <li id="separation"><nav><a href="#paragraph_separation">Paragraph Separation</a></nav></li>
+                    <li id="tracking"><nav><a href="#tracking_&_leading">Tracking & Leading</a></nav></li>
                     <br>
                     <li id="final"><a href="final_challenge.html">Final Challenge</a></li>
                 </ol>
@@ -210,7 +210,7 @@
 
 
         <div class="content">
-            <scroll-container><scroll-page id="hard_to_read_text"></scroll-page></scroll-container>
+            <scroll-container><scroll-page id="bad_text_width"></scroll-page></scroll-container>
             <div class="width">
                 <div class="demo">GRAPHIC DESIGN *JAIL*</div>
                 <div class="demo" style="float:right">DEMO 6</div>
@@ -244,61 +244,112 @@
 
 
         <div class="content">
-            <scroll-container><scroll-page id="tracking_&_leading"></scroll-page></scroll-container>
-            <div class="tracking">
+            <scroll-container><scroll-page id="all_caps_text"></scroll-page></scroll-container>
+            <div class="caps">
                 <div class="demo">GRAPHIC DESIGN *JAIL*</div>
                 <div class="demo" style="float:right">DEMO 7</div>
                 <div class="demo" style="width: 100%; text-align: center; transform: translateY(-18px);">TYPOGRAPHY RULES</div>
                 <br><br><br><br>
-                <div id="trackingt">Stretched Font</div>
+                <div class="capst">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu sagittis mauris. Nunc condimentum augue velit, eu rutrum magna fermentum elementum. Aenean sed nibh nunc. Phasellus imperdiet eu lorem nec hendrerit. Vivamus dolor sem, convallis ut pharetra tempus, auctor sed dolor. Morbi bibendum tincidunt neque, id vulputate mi tempor vel. Nam fringilla lorem suscipit, condimentum turpis eget, luctus velit. Proin rutrum erat ligula, quis aliquam nibh tincidunt vel. Etiam vitae velit ac quam commodo auctor sit amet id turpis.</div><br>
+                <div class="capst">Nunc aliquet, elit eu rhoncus pharetra, purus est laoreet ligula, vitae suscipit elit lacus sit amet nulla. Sed commodo iaculis vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum libero orci, semper sagittis ante venenatis, congue elementum ipsum. Vestibulum luctus nulla in mattis volutpat. Sed vestibulum lorem sapien, nec molestie mauris scelerisque ac. Nunc in nisi lorem. Mauris nec dui augue. Nulla vel purus ut ante condimentum euismod. Quisque feugiat laoreet magna, quis feugiat lorem rutrum sed. Phasellus dignissim mauris elit, eu volutpat elit ullamcorper congue. Ut congue fermentum velit eget aliquet.</div>
+
                 <br><br><br><br>
                 <div class="demo" style="width: 100%; text-align: center;">The typeface should remain how it is designed. If you stretch it, the proportion of its glyph will be distorted.<br>When you want a condensed / expanded text in your design, just search for a matching variable type.</div>
             </div>
         </div>
         <div class="control">
-            Font Width:
-            <div class="slidecontainer">
-                <input type="range" min="30" step="10" max="180" value="30" class="slider" id="stretchsl">
-                <output class="rangevalue" id="stretchvalue">30</output>
-            </div>
+            <input type="radio" id="caps1" name="d" checked="checked">
+            <label for="d1">Uppercase</label><br>
+            <input type="radio" id="caps2" name="d">
+            <label for="d2">Lowercase</label><br>  
+            <input type="radio" id="caps3" name="d">
+            <label for="d3">Capitalize</label><br>
+            <input type="radio" id="caps4" name="d">
+            <label for="d4">Default</label><br>
             <br>
-            <img src="pic/bomb.gif" class="gif" id="stretchgif">
+            <img src="pic/bomb.gif" class="gif" id="capsgif">
         </div>
         <br><br>
 
 
 
         <div class="content">
-            <scroll-container><scroll-page id="hard_to_read_text"></scroll-page></scroll-container>
-            <div class="width">
+            <scroll-container><scroll-page id="display_text"></scroll-page></scroll-container>
+            <div class="display">
+                <div class="demo">GRAPHIC DESIGN *JAIL*</div>
+                <div class="demo" style="float:right">DEMO 8</div>
+                <div class="demo" style="width: 100%; text-align: center; transform: translateY(-18px);">TYPOGRAPHY RULES</div>
+                <br><br><br><br>
+                <div class="displayt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu sagittis mauris. Nunc condimentum augue velit, eu rutrum magna fermentum elementum. Aenean sed nibh nunc. Phasellus imperdiet eu lorem nec hendrerit. Vivamus dolor sem, convallis ut pharetra tempus, auctor sed dolor. Morbi bibendum tincidunt neque, id vulputate mi tempor vel. Nam fringilla lorem suscipit, condimentum turpis eget, luctus velit. Proin rutrum erat ligula, quis aliquam nibh tincidunt vel. Etiam vitae velit ac quam commodo auctor sit amet id turpis.</div><br>
+                <div class="displayt">Nunc aliquet, elit eu rhoncus pharetra, purus est laoreet ligula, vitae suscipit elit lacus sit amet nulla. Sed commodo iaculis vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum libero orci, semper sagittis ante venenatis, congue elementum ipsum. Vestibulum luctus nulla in mattis volutpat. Sed vestibulum lorem sapien, nec molestie mauris scelerisque ac. Nunc in nisi lorem. Mauris nec dui augue. Nulla vel purus ut ante condimentum euismod. Quisque feugiat laoreet magna, quis feugiat lorem rutrum sed. Phasellus dignissim mauris elit, eu volutpat elit ullamcorper congue. Ut congue fermentum velit eget aliquet.</div>
+
+                <br><br><br><br>
+                <div class="demo" style="width: 100%; text-align: center;">The typeface should remain how it is designed. If you stretch it, the proportion of its glyph will be distorted.<br>When you want a condensed / expanded text in your design, just search for a matching variable type.</div>
+            </div>
+        </div>
+        <div class="control">
+            <input type="radio" id="display1" name="e" checked="checked">
+            <label for="e1">Freight Display Pro</label><br>
+            <input type="radio" id="display2" name="e">
+            <label for="e2">Freight Big Pro</label><br>
+            <input type="radio" id="display3" name="e">
+            <label for="e3"></label>Freight Displaycmp Pro<br>
+            <input type="radio" id="display4" name="e">
+            <label for="e4">Freight Text Pro</label><br>
+            <br>
+            <img src="pic/bomb.gif" class="gif" id="displaygif">
+        </div>
+        <br><br>
+
+
+
+        <div class="content">
+            <scroll-container><scroll-page id="paragraph_separation"></scroll-page></scroll-container>
+            <div class="paragraph">
                 <div class="demo">GRAPHIC DESIGN *JAIL*</div>
                 <div class="demo" style="float:right">DEMO 9</div>
                 <div class="demo" style="width: 100%; text-align: center; transform: translateY(-18px);">TYPOGRAPHY RULES</div>
                 <br><br><br><br>
-                <div class="widtht">
-                    Having the right amount of characters on each line is key to the readability of your text. Indeed, it shouldn’t merely be your design that dictates the width of your text — the ability of users to easily read through the text should also be a critical factor. Some fundamental exploration of line length and readability was conducted by Emil Ruder, a mid-twentieth century Swiss graphic designer. Ruder concluded that the optimal line length for body text is 50–60 characters per line, including spaces (“Typographie”, E. Ruder). Other sources suggest that up to 75 characters is acceptable.
-                </div>
-                <div class="widtht">
-                    Too wide: if a line of text is too long the reader’s eyes will have a hard time focusing on the text. This is because the line length makes it difficult to gauge where the line starts and ends. Furthermore it can be difficult to continue onto the correct line in large blocks of text.
-                </div>
-                <div class="widtht">
-                    Too narrow: if a line is too short the eye will have to travel back too often, breaking the reader’s rhythm. Too-short lines also tend to stress readers, making them begin on the next line before finishing the current one (hence skipping potentially important words).
-                </div>
+                <div class="paragrapht">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu sagittis mauris. Nunc condimentum augue velit, eu rutrum magna fermentum elementum. Aenean sed nibh nunc. Phasellus imperdiet eu lorem nec hendrerit. Vivamus dolor sem, convallis ut pharetra tempus, auctor sed dolor. Morbi bibendum tincidunt neque, id vulputate mi tempor vel. Nam fringilla lorem suscipit, condimentum turpis eget, luctus velit. Proin rutrum erat ligula, quis aliquam nibh tincidunt vel. Etiam vitae velit ac quam commodo auctor sit amet id turpis.</div>
+                <div class="paragrapht">Nunc aliquet, elit eu rhoncus pharetra, purus est laoreet ligula, vitae suscipit elit lacus sit amet nulla. Sed commodo iaculis vulputate. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum libero orci, semper sagittis ante venenatis, congue elementum ipsum. Vestibulum luctus nulla in mattis volutpat. Sed vestibulum lorem sapien, nec molestie mauris scelerisque ac. Nunc in nisi lorem. Mauris nec dui augue. Nulla vel purus ut ante condimentum euismod. Quisque feugiat laoreet magna, quis feugiat lorem rutrum sed. Phasellus dignissim mauris elit, eu volutpat elit ullamcorper congue. Ut congue fermentum velit eget aliquet.</div>
                 <br><br><br><br>
                 <div class="demo" style="width: 100%; text-align: center;">Text Source:
                     <a href="https://baymard.com/blog/line-length-readability" target="_blank">Readability: The Optimal Line Length</a></div>
             </div>
         </div>
         <div class="control">
-            Indentation <input type="checkbox" id="widthcheck1"><br>
-            Paragraph Spacing <input type="checkbox" id="widthcheck2"><br>
+            Indentation <input type="checkbox" id="paragraphcheck1"><br>
+            Paragraph Spacing <input type="checkbox" id="paragraphcheck2"><br>
             <br>
-            <img src="pic/bomb.gif" class="gif" id="widthgif">
+            <img src="pic/bomb.gif" class="gif" id="paragraphgif">
         </div>
         <br><br>
 
 
 
+        <div class="content">
+            <scroll-container><scroll-page id="bad_text_width"></scroll-page></scroll-container>
+            <div class="tracking">
+                <div class="demo">GRAPHIC DESIGN *JAIL*</div>
+                <div class="demo" style="float:right">DEMO 10</div>
+                <div class="demo" style="width: 100%; text-align: center; transform: translateY(-18px);">TYPOGRAPHY RULES</div>
+                <br><br><br><br>
+                <div class="trackingt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu sagittis mauris. Nunc condimentum augue velit, eu rutrum magna fermentum elementum. Aenean sed nibh nunc. Phasellus imperdiet eu lorem nec hendrerit. Vivamus dolor sem, convallis ut pharetra tempus, auctor sed dolor. Morbi bibendum tincidunt neque, id vulputate mi tempor vel. Nam fringilla lorem suscipit, condimentum turpis eget, luctus velit. Proin rutrum erat ligula, quis aliquam nibh tincidunt vel. Etiam vitae velit ac quam commodo auctor sit amet id turpis.</div>
+                <br><br><br><br>
+                <div class="demo" style="width: 100%; text-align: center;">Text Source:
+                    <a href="https://baymard.com/blog/line-length-readability" target="_blank">Readability: The Optimal Line Length</a></div>
+            </div>
+        </div>
+        <div class="control">
+            Text Width:
+            <div class="slidecontainer">
+                <input type="range" min="10" step="10" max="100" value="100" class="slider" id="widthsl">
+                <output class="rangevalue" id="widthvalue">100</output>
+            </div>
+            <br>
+            <img src="pic/bomb.gif" class="gif" id="widthgif">
+        </div>
+        <br><br>
 
 
         </div>

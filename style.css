@@ -51,7 +51,7 @@ a:hover {
 }
 
 .catjail {
-    width: calc((100% - 70px) / 15);
+    width: calc((100% - 80px) / 15);
     display: inline-block;
 }
 

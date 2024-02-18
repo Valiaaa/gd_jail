@@ -51,7 +51,7 @@ a:hover {
 }
 
 .catjail {
-    width: calc(94vw / 15);
+    width: calc((100% - 70px) / 15);
     display: inline-block;
 }
 
@@ -85,7 +85,7 @@ a:hover {
 
 /* Main */
 .menu {
-    width: fit-content;
+    width: 13vw;
     display: inline-block;
     vertical-align: top;
     margin-top: 1vw;
@@ -96,12 +96,11 @@ a:hover {
 #menu {
     position: sticky;
     top: 0;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     color: blue;
     padding-right: 0.5vw;
     border: 2px solid black;
     cursor: pointer;
-    width: fit-content;
 }
 
 #menu:hover {
@@ -131,7 +130,7 @@ ol {
 }
 
 #main {
-    width: calc(96vw - 235px);
+    width: calc(83vw - 22px);
     display: inline-block;
     vertical-align: top;
     margin-top: 1vw;
@@ -371,9 +370,9 @@ ol {
     }
   }
 
-@media (min-width: 1900px) {
-    #main {
-        width: calc(95vw - 235px);
+@media (min-width: 1625px) {
+    #menu {
+        font-size: 1vw;
     }
 }
 
